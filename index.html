@@ -1,0 +1,89 @@
+<!doctype html >
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Brave UX App</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 128x128" href="http://braveux.com/favicon.ico">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+<![endif]-->
+
+</head>
+
+<body>
+    <div id="wrapper" class="wrapper">
+        <!-- Sticky Header -->
+        <nav class="menubar">
+            <div class="title"> The Brave UX App </div>
+            <div onclick="toggleSideMenu()" id="menu-toggle" class="menu-toggle">
+                Menu
+                <div class="menu-icon"></div>
+            </div>
+        </nav>
+        <!-- End Header -->
+
+        <!-- Slide Menu from Right -->
+        <nav id="slide-menu" class="slide-menu">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+            <ul class="submenu">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Log In</a></li>
+            </ul>
+        </nav>
+        <!-- End Slide Menu -->
+
+        <div id="error-notif">Your username or password wasn’t recognized.</div>
+
+        <div class="content">
+            <div class="flag-icon"></div>
+            <h3>Do NOT bookmark this page.</h3>
+
+            <!-- Sign Up Form -->
+            <form onsubmit="signup(); return false;">
+                <h1>Sign Up</h1>
+
+                <div>
+                    <label>Username</label>
+                    <input id="username-field" type="text" name="Username" />
+                </div>
+                <div class="right-addon">
+                    <label>Password</label>
+                    <div id="pwd-toggle" onclick="togglePwdField()" class="eye-icon" style="display:none"></div>
+                    <input id="pwd-field" type="password" name="Password" />
+                </div>
+
+                <div>
+                    <input class="button" type="submit" value="Sign Up">
+                    <h2 class="text-right"><a href="#">Need help?</a></h2>
+                </div>
+            </form>
+            <!-- End Sign Up Form -->
+        </div>
+        <!-- End Content -->
+
+        <footer>
+            <p> Powered By Brave UX</p>
+        </footer>
+
+    </div>
+    <!-- menu script -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
